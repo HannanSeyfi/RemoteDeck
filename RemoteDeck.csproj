@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <OutputType>WinExe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>RemoteDeck</AssemblyName>
+    <RootNamespace>RemoteDeck</RootNamespace>
+    <ApplicationIcon>Assets\RemoteDeck.ico</ApplicationIcon>
+  </PropertyGroup>
+</Project>

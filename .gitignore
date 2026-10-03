@@ -1,0 +1,12 @@
+# Build and publish output
+**/bin/
+**/obj/
+/publish/
+
+# Local IDE state
+.vs/
+*.user
+*.suo
+
+# Local runtime data, if copied into the project
+trusted-devices.json
