@@ -23,7 +23,11 @@ dotnet publish -c Release -r win-x64 --self-contained true -o .\publish
 
 The whole `publish` directory is required because the browser assets are deployed under `wwwroot`.
 
-After publishing, run `.setup-firewall.ps1` from an elevated PowerShell prompt. It removes the development rule and creates a rule restricted to TCP 8765, Private networks, the LocalSubnet, and the published executable. Run `.install-startup.ps1` to add a per-user startup shortcut.
+After publishing, run `.setup-firewall.ps1` from an elevated PowerShell prompt. It removes the development rule and creates a rule restricted to TCP 8765, Private networks, the LocalSubnet, and the published executable.
+
+## Start automatically with Windows
+
+Run `.\install-startup.ps1` after publishing. It creates a shortcut to `publish\RemoteDeck.exe` in the current user's Windows Startup folder. RemoteDeck then starts when that user signs in; it does not run before sign-in. Keep the project and `publish` directory at the same location so the shortcut remains valid. To disable automatic startup, remove `RemoteDeck.lnk` from the Startup folder (`Win+R`, then `shell:startup`).
 
 ## Security boundaries
 
